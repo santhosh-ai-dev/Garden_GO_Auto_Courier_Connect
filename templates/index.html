@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-commerce Dashboard</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-  <link href='styles.css' rel='stylesheet'>
-  <script src="dashboard.js"></script>
+  <link href='static/styles.css' rel='stylesheet'>
+  <script src="static/dashboard.js"></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
       <button>Register</button>
     </nav>
   </div>
-
+  <!--
   <div class="label">
     <h2>ECOMMERCE DASHBOARD</h2>
     <button>Qtr 1</button>
@@ -34,7 +34,7 @@
       <option value="week">Week</option>
       <option value="month">Month</option>
     </select>
-  </div>
+  </div>   -->
 
   <!-- Today's Metrics -->
   <div class="metrics">
@@ -72,6 +72,11 @@
     <div class="card">
       <h3>Sales Performance</h3>
       <canvas id="salesPerformance"></canvas>
+    </div>
+
+    <div class="card">
+      <h3>Top Performing Products</h3>
+      <canvas id="topPerformingProducts"></canvas>
     </div>
   </div>
 

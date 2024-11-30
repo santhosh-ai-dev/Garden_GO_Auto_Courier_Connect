@@ -1,7 +1,6 @@
 from sqlalchemy import create_engine, Column, Integer, String, Float, Date, ForeignKey
 from sqlalchemy.orm import relationship, declarative_base, sessionmaker
 
-
 Base = declarative_base()
 
 
@@ -73,14 +72,13 @@ class Category(Base):
     __tablename__ = 'categories'
     category_id = Column(Integer, primary_key=True)
     category_name = Column(String(255), nullable=False)
-
     products = relationship('Product', back_populates='category')
     product_availability = relationship('ProductAvailability', back_populates='category')
     category_summary = relationship('CategorySummary', back_populates='category')
 
 
 def create_database():
-    database_url = "mysql+mysqlconnector://root:mysql@123@localhost:3306/autogo"
+    database_url = "sqlite:///gardengo.db"
     engine = create_engine(database_url, echo=True)
     Base.metadata.create_all(engine)
     return engine
