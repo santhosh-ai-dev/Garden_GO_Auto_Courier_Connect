@@ -5,84 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-commerce Dashboard</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-  <link href='static/styles.css' rel='stylesheet'>
+  <link href="static/styles.css" rel="stylesheet">
   <script src="static/dashboard.js"></script>
 </head>
 
 <body>
-  <div class="header">
-    <h1>Go Green</h1>
-    <nav>
+  <header class="header">
+    <h1 class="logo">Go Green</h1>
+    <nav class="nav">
       <a href="#">Products</a>
       <a href="#">Pricing</a>
       <a href="#">Dashboard</a>
       <a href="#">Contact</a>
-      <button>Sign In</button>
-      <button>Register</button>
+      <button class="btn primary">Sign In</button>
+      <button class="btn secondary">Register</button>
     </nav>
-  </div>
-  <!--
-  <div class="label">
-    <h2>ECOMMERCE DASHBOARD</h2>
-    <button>Qtr 1</button>
-    <button>Qtr 2</button>
-    <button>Qtr 3</button>
-    <button>Qtr 4</button>
-    <select onchange="getProductAvailabilty(value)">
-      <option value="all">All</option>
-      <option value="day">Day</option>
-      <option value="week">Week</option>
-      <option value="month">Month</option>
-    </select>
-  </div>   -->
+  </header>
 
-  <!-- Today's Metrics -->
-  <div class="metrics">
-    <div class="metric-card">
-      <h3>Total Sales</h3>
-      <h1>438K</h1>
-    </div>
-    <div class="metric-card">
-      <h3>Total Profit</h3>
-      <h1>50K</h1>
-    </div>
-    <div class="metric-card">
-      <h3>Average Sales</h3>
-      <h1>5.2K</h1>
-    </div>
-  </div>
+  <main>
+    <!-- Today's Metrics -->
+    <section class="metrics">
+      <div class="metric-card">
+        <h3>Total Sales</h3>
+        <h1>438K</h1>
+      </div>
+      <div class="metric-card">
+        <h3>Total Profit</h3>
+        <h1>50K</h1>
+      </div>
+      <div class="metric-card">
+        <h3>Average Sales</h3>
+        <h1>5.2K</h1>
+      </div>
+    </section>
 
-  <!-- Chart Rows -->
-  <div class="chart-container">
-    <div class="card">
-      <h3>Product Availability</h3>
-      <canvas id="productAvailability"></canvas>
-    </div>
+    <!-- Chart Rows -->
+    <section class="chart-container">
+      <div class="card">
+        <h3>Product Availability</h3>
+        <canvas id="productAvailability"></canvas>
+      </div>
+      <div class="card">
+        <h3>Total Products Sold</h3>
+        <canvas id="totalProductsSold"></canvas>
+      </div>
+      <div class="card">
+        <h3>Profit over period</h3>
+        <canvas id="profitChart"></canvas>
+      </div>
+      <div class="card">
+        <h3>Sales Performance</h3>
+        <canvas id="salesPerformance"></canvas>
+      </div>
+      <div class="card">
+        <h3>Top Performing Products</h3>
+        <canvas id="topPerformingProducts"></canvas>
+      </div>
+    </section>
+  </main>
 
-    <div class="card">
-      <h3>Total Products Sold</h3>
-      <canvas id="totalProductsSold"></canvas>
-    </div>
-
-    <div class="card">
-      <h3>Profit over period</h3>
-      <canvas id="profitChart"></canvas>
-    </div>
-
-    <div class="card">
-      <h3>Sales Performance</h3>
-      <canvas id="salesPerformance"></canvas>
-    </div>
-
-    <div class="card">
-      <h3>Top Performing Products</h3>
-      <canvas id="topPerformingProducts"></canvas>
-    </div>
-  </div>
-
-  <div class="footer">
+  <footer class="footer">
     <p>&copy; 2024 Go Green E-commerce Dashboard</p>
-  </div>
+  </footer>
 </body>
-
 </html>
